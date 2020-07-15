@@ -154,14 +154,14 @@ const ApartmentNew = (props) => {
         <Row form>
           <Col md={6}>
           <FormGroup>
-            <Label htmlFor="bedrooms" id="bedrooms">
-              Bedrooms
+            <Label htmlFor="bathrooms" id="bathrooms">
+              Bathrooms
             </Label>
             <Input
               type="text"
-              name="bedrooms"
+              name="bathrooms"
               onChange={ handleChange }
-              value={form.bedrooms}
+              value={form.bathrooms}
             />
           </FormGroup>
           </Col>
@@ -181,7 +181,7 @@ const ApartmentNew = (props) => {
           </FormGroup>
           </Col>
         </Row>
-        <Button color="info" onClick={ handleSubmit } id="submit">
+        <Button href="/" color="info" onClick={ handleSubmit } id="submit">
           Add New Apartments
         </Button>
       </Form>

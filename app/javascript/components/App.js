@@ -1,8 +1,10 @@
 import React from "react"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import { Container } from "reactstrap"
-import ApartmentList from "../components/pages/ApartmentList"
-import ApartmentNew from "../components/pages/ApartmentNew"
+import Header from "./Header"
+import Navigation from "./Navigation"
+import ApartmentList from "./pages/ApartmentList"
+import ApartmentNew from "./pages/ApartmentNew"
 
 
 class App extends React.Component {
@@ -35,8 +37,8 @@ async componentDidMount () {
 
     return (
       <React.Fragment>
+        <Header />
       <Router>
-      <div>
         {logged_in &&
           <div>
               <div>
@@ -52,7 +54,6 @@ async componentDidMount () {
             <a href={sign_in_route}>Sign In</a>
           </div>
         }
-      </div>
       <Container>
       <Switch>
         <Route
@@ -71,4 +72,4 @@ async componentDidMount () {
   }
 }
 
-export default App
+export default App;
